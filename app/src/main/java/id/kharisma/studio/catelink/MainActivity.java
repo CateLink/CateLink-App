@@ -10,7 +10,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView cardLogin, cardSignup;
+    CardView card_Login, card_Signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Mengganti warna status bar di spesifik activity end
 
-        cardLogin = findViewById(R.id.cardLogin);
-        cardSignup = findViewById(R.id.cardSignup);
+        card_Login = findViewById(R.id.cardLogin);
+        card_Signup = findViewById(R.id.cardSignup);
 
         // Menghubungkan ke login activity start
 
-        cardLogin.setOnClickListener(new View.OnClickListener() {
+        card_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Menghubungkan ke signup activity start
 
-        cardSignup.setOnClickListener(new View.OnClickListener() {
+        card_Signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SignupActivity.class);

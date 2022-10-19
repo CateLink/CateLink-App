@@ -121,7 +121,7 @@
 
         <RadioButton
             android:id="@+id/btn_male"
-            android:layout_width="match_parent"
+            android:layout_width="20px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"
@@ -130,16 +130,16 @@
 
         <RadioButton
             android:id="@+id/btn_female"
-            android:layout_width="match_parent"
+            android:layout_width="20px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="15sp"
+            android:fontFamily="@font/inknutantiqua_light"
             android:text="Wanita"
-            android:fontFamily="@font/inknutantiqua_light"/>
+            android:textSize="15sp" />
 
         <RadioButton
             android:id="@+id/btn_others"
-            android:layout_width="match_parent"
+            android:layout_width="20px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="15sp"

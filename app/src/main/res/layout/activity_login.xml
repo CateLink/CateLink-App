@@ -15,7 +15,7 @@
         android:layout_marginTop="120dp"
         android:gravity="center"
         android:text="Login"
-        android:textColor="@color/palebrownbtn"
+        android:textColor="@color/black"
         android:fontFamily="@font/inknutantiqua_medium"
         android:textSize="32sp" />
 
