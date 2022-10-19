@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:orientation="vertical"
+    android:background="@color/bonebackgroundcolor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_medium"
+        android:textSize="30sp" />
+
+    <!-- Email Start-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Email : "
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_semibold"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edtsg_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittxt_shape"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/inknutantiqua_regular"
+        />
+    <!-- Email End-->
+
+    <!-- Usn Start-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Username : "
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_semibold"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edtsg_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Username"
+        android:inputType="text"
+        android:background="@drawable/edittxt_shape"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/inknutantiqua_regular"
+        />
+    <!-- Usn End-->
+
+    <!-- Notelp Start-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Nomor Telepon : "
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_semibold"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edtsg_notelpon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Nomor Telepon"
+        android:inputType="number"
+        android:background="@drawable/edittxt_shape"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/inknutantiqua_regular"
+        />
+    <!-- Notelp End-->
+
+    <!-- Gender Start-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Jenis Kelamin : "
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_semibold"
+        android:textSize="20sp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp">
+
+        <RadioButton
+            android:id="@+id/btn_male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Pria"
+            android:fontFamily="@font/inknutantiqua_light"/>
+
+        <RadioButton
+            android:id="@+id/btn_female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Wanita"
+            android:fontFamily="@font/inknutantiqua_light"/>
+
+        <RadioButton
+            android:id="@+id/btn_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="Lainnya"
+            android:fontFamily="@font/inknutantiqua_light"/>
+    </RadioGroup>
+    <!-- Gender End-->
+
+    <!-- Password Start-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Password : "
+        android:textColor="@color/black"
+        android:fontFamily="@font/inknutantiqua_semibold"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edtsg_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Masukkan Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittxt_shape"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/inknutantiqua_regular"
+        />
+    <!-- Password End-->
+
+    <!-- Button Signup Start-->
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="Signup"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_gravity="center"
+        />
+    <!-- Button Signup End-->
+
+</LinearLayout>
