@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,11 +14,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/catelink_logo" />
+        android:src="@drawable/catelink_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtwelcome"
@@ -26,11 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logocatelink"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/inknutantiqua_medium"
         android:text="Welcome"
         android:textColor="@color/black"
         android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logocatelink"
         tools:ignore="ExtraText" />
 
     <GridLayout
@@ -39,12 +42,14 @@
         android:layout_height="253dp"
         android:layout_below="@id/txtwelcome"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:columnCount="2"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:rowCount="1">
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtwelcome">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardLogin"
@@ -112,24 +117,34 @@
         android:id="@+id/txtby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/grid1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_below="@+id/grid1"
+        android:layout_alignStart="@+id/grid1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/inknutantiqua_light"
         android:text="by"
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/grid1"
+        app:layout_constraintStart_toStartOf="@+id/grid1"
+        app:layout_constraintTop_toBottomOf="@+id/grid1" />
 
     <ImageView
         android:id="@+id/logogreenly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtby"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="-15dp"
-        android:layout_marginBottom="-8dp"
+        android:layout_width="212dp"
+        android:layout_height="109dp"
+        android:layout_alignTop="@+id/txtby"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
         android:paddingLeft="18dp"
-        android:src="@drawable/greenly_logo" />
+        android:src="@drawable/greenly_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtby" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

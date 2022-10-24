@@ -1,192 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignupActivity"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
     android:background="@color/bonebackgroundcolor">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Sign Up"
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_medium"
-        android:textSize="30sp" />
+        tools:context=".SignupActivity">
 
-    <!-- Email Start-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Email : "
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_semibold"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:id="@+id/edtsg_email"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Masukkan Email"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/edittxt_shape"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:paddingLeft="10dp"
-        android:fontFamily="@font/inknutantiqua_regular"
-        />
-    <!-- Email End-->
-
-    <!-- Usn Start-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Username : "
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_semibold"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:id="@+id/edtsg_username"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Masukkan Username"
-        android:inputType="text"
-        android:background="@drawable/edittxt_shape"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:paddingLeft="10dp"
-        android:fontFamily="@font/inknutantiqua_regular"
-        />
-    <!-- Usn End-->
-
-    <!-- Notelp Start-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Nomor Telepon : "
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_semibold"
-        android:textSize="20sp"
-        />
-
-    <EditText
-        android:id="@+id/edtsg_notelpon"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Masukkan Nomor Telepon"
-        android:inputType="number"
-        android:background="@drawable/edittxt_shape"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:paddingLeft="10dp"
-        android:fontFamily="@font/inknutantiqua_regular"
-        />
-    <!-- Notelp End-->
-
-    <!-- Gender Start-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Jenis Kelamin : "
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_semibold"
-        android:textSize="20sp"
-        />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp">
-
-        <RadioButton
-            android:id="@+id/btn_male"
-            android:layout_width="20px"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="15sp"
-            android:text="Pria"
-            android:fontFamily="@font/inknutantiqua_light"/>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/inknutantiqua_medium"
+            android:gravity="center"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/btn_female"
-            android:layout_width="20px"
+        <!-- Email Start-->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/inknutantiqua_light"
-            android:text="Wanita"
-            android:textSize="15sp" />
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:text="Email : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-        <RadioButton
-            android:id="@+id/btn_others"
-            android:layout_width="20px"
+        <EditText
+            android:id="@+id/edtsg_email"
+            android:layout_width="338dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/edittxt_shape"
+            android:fontFamily="@font/inknutantiqua_regular"
+            android:hint="Masukkan Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <!-- Email End-->
+
+        <!-- Usn Start-->
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="15sp"
-            android:text="Lainnya"
-            android:fontFamily="@font/inknutantiqua_light"/>
-    </RadioGroup>
-    <!-- Gender End-->
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:text="Username : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/edtsg_email" />
 
-    <!-- Password Start-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:text="Password : "
-        android:textColor="@color/black"
-        android:fontFamily="@font/inknutantiqua_semibold"
-        android:textSize="20sp"
-        />
+        <EditText
+            android:id="@+id/edtsg_username"
+            android:layout_width="338dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittxt_shape"
+            android:fontFamily="@font/inknutantiqua_regular"
+            android:hint="Masukkan Username"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/edtsg_email"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        <!-- Usn End-->
 
-    <EditText
-        android:id="@+id/edtsg_password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Masukkan Password"
-        android:inputType="textPassword"
-        android:background="@drawable/edittxt_shape"
-        android:layout_marginLeft="55dp"
-        android:layout_marginRight="55dp"
-        android:paddingLeft="10dp"
-        android:fontFamily="@font/inknutantiqua_regular"
-        />
-    <!-- Password End-->
+        <!-- Notelp Start-->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:text="Nomor Telepon : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/edtsg_username" />
 
-    <!-- Button Signup Start-->
-    <Button
-        android:id="@+id/btn_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_shape"
-        android:text="Signup"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_gravity="center"
-        />
-    <!-- Button Signup End-->
+        <EditText
+            android:id="@+id/edtsg_notelpon"
+            android:layout_width="338dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittxt_shape"
+            android:fontFamily="@font/inknutantiqua_regular"
+            android:hint="Masukkan Nomor Telepon"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/edtsg_username"
+            app:layout_constraintStart_toStartOf="@+id/edtsg_username"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <!-- Notelp End-->
 
-</LinearLayout>
+        <!-- Gender Start-->
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:text="Jenis Kelamin : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/edtsg_notelpon" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="356dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/edtsg_notelpon"
+            app:layout_constraintStart_toStartOf="@+id/edtsg_notelpon"
+            app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+            <RadioButton
+                android:id="@+id/btn_male"
+                android:layout_width="20px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inknutantiqua_light"
+                android:text="Pria"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/btn_female"
+                android:layout_width="20px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inknutantiqua_light"
+                android:text="Wanita"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/btn_others"
+                android:layout_width="20px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inknutantiqua_light"
+                android:text="Lainnya"
+                android:textSize="15sp" />
+        </RadioGroup>
+        <!-- Gender End-->
+
+        <!-- Password Start-->
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inknutantiqua_semibold"
+            android:text="Password : "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <EditText
+            android:id="@+id/edtsg_password"
+            android:layout_width="338dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittxt_shape"
+            android:fontFamily="@font/inknutantiqua_regular"
+            android:hint="Masukkan Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/edtsg_notelpon"
+            app:layout_constraintStart_toStartOf="@+id/edtsg_notelpon"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <!-- Password End-->
+
+        <!-- Button Signup Start-->
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="338dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_shape"
+            android:text="Signup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edtsg_password"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edtsg_password"
+            app:layout_constraintTop_toBottomOf="@+id/edtsg_password"
+            app:layout_constraintVertical_bias="1.0" />
+        <!-- Button Signup End-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
