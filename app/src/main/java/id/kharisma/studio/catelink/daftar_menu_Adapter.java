@@ -22,8 +22,8 @@ public class daftar_menu_Adapter extends RecyclerView.Adapter<daftar_menu_Adapte
         TextView textNamavendor;
         TextView textAlamatvendor;
         TextView textHargamenu;
+        TextView textRatingvalue;
         ImageView posterMenu;
-        RatingBar startRating;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -32,8 +32,9 @@ public class daftar_menu_Adapter extends RecyclerView.Adapter<daftar_menu_Adapte
             textNamavendor = itemView.findViewById(R.id.text_namavendor);
             textAlamatvendor = itemView.findViewById(R.id.text_alamatvendor);
             textHargamenu = itemView.findViewById(R.id.text_hargamenu);
+            textRatingvalue = itemView.findViewById(R.id.rating_value);
             posterMenu = itemView.findViewById(R.id.clmenu_poster);
-            startRating = itemView.findViewById(R.id.rating_barmenu);
+
         }
     }
 
@@ -56,8 +57,16 @@ public class daftar_menu_Adapter extends RecyclerView.Adapter<daftar_menu_Adapte
         TextView text_namavendor = holder.textNamavendor;
         TextView text_alamatvendor = holder.textAlamatvendor;
         TextView text_hargamenu = holder.textHargamenu;
+        TextView rating_value = holder.textRatingvalue;
         ImageView clmenu_poster = holder.posterMenu;
-        RatingBar rating_barmenu = holder.startRating;
+
+        text_namamenu.setText(dataItem.get(position).getMenuName());
+        text_namavendor.setText(dataItem.get(position).getVendorName());
+        text_alamatvendor.setText(dataItem.get(position).getVendorAddress());
+        text_hargamenu.setText(dataItem.get(position).getMenuPrice());
+        rating_value.setText(dataItem.get(position).getRateValue());
+        clmenu_poster.setImageResource(dataItem.get(position).getPoster());
+
 
     }
 

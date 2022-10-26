@@ -3,6 +3,7 @@ package id.kharisma.studio.catelink;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,19 +34,51 @@ public class LoginActivity extends AppCompatActivity {
         lget_username = findViewById(R.id.edtlg_username);
         lget_password = findViewById(R.id.edtlg_password);
 
-        /*btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(lget_username.getText().toString().equalsIgnoreCase() &&
+                if (cek_Lgn() == true) {
+                    /*if(lget_username.getText().toString().equalsIgnoreCase() &&
                         lget_password.getText().toString().equalsIgnoreCase()) {
                     startActivity(new Intent(LoginActivity.this, .class));
                     finish();
                 }else{
                     Toast.makeText(LoginActivity.this,
                             "Username atau Password Anda Salah", Toast.LENGTH_LONG).show();
+                }*/
+
+                    startActivity(new Intent(LoginActivity.this, Home_catemenuActivity.class));
+                    finish();
+
                 }
             }
-        });*/
 
+        });
     }
+
+
+    //Memastikan pengisian data sdh sesuai ketentuan
+    public boolean cek_Lgn() {
+        //inisialisasi data ke dalam variabel
+        String Username = lget_username.getText().toString();
+        String Pass = lget_password.getText().toString();
+        boolean nilai = false;
+
+        //Memberikan tanda dan mengarahkan pada data yang belum di isi
+        if (!Pass.isEmpty() && !Username.isEmpty()) {
+            nilai = true; //Pengisian sesuai ketentuan
+        } else {
+            if (Pass.isEmpty()) {
+                lget_password.setError("Password required");
+                lget_password.requestFocus();
+            }
+            if (Username.isEmpty()) {
+                lget_username.setError("Email required");
+                lget_username.requestFocus();
+            }
+        }
+        return nilai;
+    }
+
+
 }

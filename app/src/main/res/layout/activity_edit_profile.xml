@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_Profile_Activity"
+    android:background="@color/bonebackgroundcolor">
+
+    <TextView
+        android:id="@+id/txt_editprof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inknutantiqua_medium"
+        android:paddingLeft="5dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/snow"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:text="Username :"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:text="Nama Lengkap :" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/edttxtclr"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:inputType="textPersonName"
+                android:hint="Nama Lengkap"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="Email :"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/edttxtclr"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="Nomor Telephone :"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:background="@color/edttxtclr"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:inputType="phone"
+                android:hint="Nomor Telephone"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="Jenis Kelamin"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_pria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Pria"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inknutantiqua_medium"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Wanita"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inknutantiqua_medium"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Lainnya"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inknutantiqua_medium" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:text="Kecamatan :" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#E9E2DB"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:hint="Kecamatan"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:text="Kode Pos :" />
+
+
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@color/edttxtclr"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:hint="Kode Pos"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/inknutantiqua_medium"
+                android:text="Alamat :" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/edttxtclr"
+                android:ems="10"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:inputType="textPersonName"
+                android:hint="Alamat"
+                android:fontFamily="@font/inknutantiqua_medium"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/palebrownbtn"
+                android:text="Simpan"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

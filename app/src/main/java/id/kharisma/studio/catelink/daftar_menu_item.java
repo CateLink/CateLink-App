@@ -51,5 +51,15 @@ public class daftar_menu_item {
 
     };
 
+    static String[] rateValue = {
+            "4,5",
+            "5,0",
+            "4,0",
+            "3,5",
+            "5,0",
+            "4,5",
+
+    };
+
 
 }

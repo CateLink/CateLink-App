@@ -2,6 +2,8 @@ package id.kharisma.studio.catelink;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,16 +15,47 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.util.ArrayList;
+
 public class Home_catemenuActivity extends AppCompatActivity {
 
     // Inisialisasi variabel
     BottomNavigationView nav;
+    RecyclerView recyclerView;
+    daftar_menu_Adapter daftarMenuAdapter;
+    RecyclerView.LayoutManager layoutManager;
+    ArrayList<daftar_menu_item_model> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_catemenu);
 
+        // Recycler View
+        recyclerView = findViewById(R.id.menu_recycler);
+        recyclerView.setHasFixedSize(true);
+
+        // Recycler View model Grid dan jumlah ke samping
+        layoutManager = new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(layoutManager);
+
+        data = new ArrayList<>();
+        for (int i = 0; i < daftar_menu_item.namaMenu.length; i++){
+            data.add(new daftar_menu_item_model(
+                    daftar_menu_item.namaMenu[i],
+                    daftar_menu_item.namaVendor[i],
+                    daftar_menu_item.alamatVendor[i],
+                    daftar_menu_item.hargaMenu[i],
+                    daftar_menu_item.rateValue[i],
+                    daftar_menu_item.menuposter[i]
+            ));
+        }
+
+        // membuat adapter
+        daftarMenuAdapter = new daftar_menu_Adapter(data);
+        recyclerView.setAdapter(daftarMenuAdapter);
+
+        // Bottom Nav
         nav = findViewById(R.id.bottom_navigation);
 
 

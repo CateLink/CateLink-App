@@ -9,8 +9,8 @@
 
     <SearchView
         android:id="@+id/search_view"
-        android:layout_width="292dp"
-        android:layout_height="53dp"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/search_shape"
         android:iconifiedByDefault="false"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/inknutantiqua_medium"
         android:paddingLeft="5dp"
@@ -37,20 +37,24 @@
 
     <ImageButton
         android:id="@+id/btn_cart"
-        android:layout_width="72dp"
-        android:layout_height="63dp"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="@android:color/transparent"
         android:src="@drawable/ic_baseline_shopping_cart_24"
         app:layout_constraintEnd_toEndOf="@+id/textViewMenu"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/search_view"
         app:layout_constraintTop_toBottomOf="@+id/textViewMenu" />
 
     <RelativeLayout
-        android:layout_width="414dp"
-        android:layout_height="547dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_view">
@@ -58,8 +62,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/menu_recycler"
             android:layout_width="match_parent"
-            android:layout_height="516dp"
-            tools:listitem="@layout/grid_item_menu_ct" />
+            android:layout_height="match_parent"
+            tools:listitem="@layout/grid_item_menu_ct"/>
 
     </RelativeLayout>
 
