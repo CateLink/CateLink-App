@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746532121097",
+    "project_id": "catelink-9cde0",
+    "storage_bucket": "catelink-9cde0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746532121097:android:50210a461095745be7a6d8",
+        "android_client_info": {
+          "package_name": "id.kharisma.studio.catelink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746532121097-q1fn2nvin51b83h7urbukaaml45sfshg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-VQmjllsWwCcwIQnB8283wLAJFx5mAL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746532121097-q1fn2nvin51b83h7urbukaaml45sfshg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

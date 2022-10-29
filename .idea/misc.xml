@@ -5,10 +5,17 @@
       <map>
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/bottomnav_selector.xml" value="0.162" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/button_shape.xml" value="0.162" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/card_view_pesanan.xml" value="0.16666666666666666" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/edittxt_shape.xml" value="0.162" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.167" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.167" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.162" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.167" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_heart_filled.xml" value="0.167" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/ic_heart_outline.xml" value="0.167" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/search_shape.xml" value="0.162" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/selector_favorite_menu.xml" value="0.167" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/drawable/shape_accbox.xml" value="0.167" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/font/font.xml" value="0.20885416666666667" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/font/inknut_antiqua.xml" value="0.20989583333333334" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_catemenu.xml" value="0.1796875" />
@@ -22,13 +29,14 @@
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_pesanan.xml" value="0.15896739130434784" />
-        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_recommend.xml" value="0.1" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_recommend.xml" value="0.16666666666666666" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_settings.xml" value="0.13055303717135086" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_signup.xml" value="0.22" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_splashscn.xml" value="0.22" />
-        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_user_profile.xml" value="0.1796875" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/custom_actionbar_image.xml" value="0.1796875" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/grid_item_favorite_ct.xml" value="0.17864583333333334" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/layout/grid_item_menu_ct.xml" value="0.1490036231884058" />
         <entry key="..\:/MINE/A02 KULIAH/Semester 7/Tugas Aplikasi/CateLink/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1796875" />
       </map>

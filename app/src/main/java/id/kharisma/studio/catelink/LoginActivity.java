@@ -1,20 +1,27 @@
 package id.kharisma.studio.catelink;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity {
 
     private Button btnLogin;
-    private EditText lget_username, lget_password;
+    private EditText lget_email, lget_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,25 +38,19 @@ public class LoginActivity extends AppCompatActivity {
         // Custom image for action bar
 
         btnLogin = findViewById(R.id.btn_login);
-        lget_username = findViewById(R.id.edtlg_username);
+        lget_email = findViewById(R.id.edtlg_email);
         lget_password = findViewById(R.id.edtlg_password);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cek_Lgn() == true) {
-                    /*if(lget_username.getText().toString().equalsIgnoreCase() &&
-                        lget_password.getText().toString().equalsIgnoreCase()) {
-                    startActivity(new Intent(LoginActivity.this, .class));
-                    finish();
-                }else{
-                    Toast.makeText(LoginActivity.this,
-                            "Username atau Password Anda Salah", Toast.LENGTH_LONG).show();
-                }*/
 
-                    startActivity(new Intent(LoginActivity.this, Home_catemenuActivity.class));
-                    finish();
+                // Inisialisasi data ke dalam Var
+                String Email = lget_email.getText().toString();
+                String Pass = lget_password.getText().toString();
 
+                if (cek_Lgn(Email, Pass) == true) {
+                    LogAcc(Email, Pass); // Masuk menggunakan akun pd database
                 }
             }
 
@@ -58,27 +59,68 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //Memastikan pengisian data sdh sesuai ketentuan
-    public boolean cek_Lgn() {
-        //inisialisasi data ke dalam variabel
-        String Username = lget_username.getText().toString();
-        String Pass = lget_password.getText().toString();
-        boolean nilai = false;
+    public boolean cek_Lgn(String Email, String Pass) {
 
         //Memberikan tanda dan mengarahkan pada data yang belum di isi
-        if (!Pass.isEmpty() && !Username.isEmpty()) {
-            nilai = true; //Pengisian sesuai ketentuan
+        if (Pass.isEmpty()) {
+            lget_password.setError("Password Required");
+            lget_password.requestFocus();
+        }
+        if (Email.isEmpty()) {
+            lget_email.setError("Email Required");
+            lget_email.requestFocus();
+        }
+
+        // Mengecek apabila ada yang belum diisi
+        if (Email.isEmpty() || Pass.isEmpty()) {
+            return false;
         } else {
-            if (Pass.isEmpty()) {
-                lget_password.setError("Password required");
-                lget_password.requestFocus();
+            // Memastikan email berformat email
+            if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+                lget_email.setError("Email is invalid");
+                Toast.makeText(LoginActivity.this,
+                        "Email tidak sesuai", Toast.LENGTH_LONG).show();
+                return false;
             }
-            if (Username.isEmpty()) {
-                lget_username.setError("Email required");
-                lget_username.requestFocus();
+            // Memastikan kata sandi tidak kurang dari 6 karakter
+            if (Pass.length() < 6) {
+                lget_password.setError("Password is invalid");
+                Toast.makeText(LoginActivity.this,
+                        "Kata sandi belum sampai 6 karakter", Toast.LENGTH_LONG).show();
+                return false;
+            } else {
+                return true;
             }
         }
-        return nilai;
     }
 
+    // Masuk akun Database
+    public void LogAcc(String Email, String Pass) {
+
+        FirebaseAuth firebaseauth = FirebaseAuth.getInstance();
+
+        firebaseauth.signInWithEmailAndPassword(Email, Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    // Berhasil Login
+                    if (firebaseauth.getCurrentUser().isEmailVerified()) {
+                        // Test halaman
+                        startActivity(new Intent(LoginActivity.this, Home_catemenuActivity.class));
+                        finish();
+                    } else {
+                        Toast.makeText(LoginActivity.this,
+                                "Email belum terdaftar", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    // Gagal Login
+                    Toast.makeText(LoginActivity.this,
+                            task.getException().getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+        });
+
+    }
 
 }

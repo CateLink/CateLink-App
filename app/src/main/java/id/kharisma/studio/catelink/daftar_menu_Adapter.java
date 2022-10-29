@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,7 +32,7 @@ public class daftar_menu_Adapter extends RecyclerView.Adapter<daftar_menu_Adapte
             textAlamatvendor = itemView.findViewById(R.id.text_alamatvendor);
             textHargamenu = itemView.findViewById(R.id.text_hargamenu);
             textRatingvalue = itemView.findViewById(R.id.rating_value);
-            posterMenu = itemView.findViewById(R.id.clmenu_poster);
+            posterMenu = itemView.findViewById(R.id.clmenu_poster1);
 
         }
     }
