@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_itempesanan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="5dp"
+    android:background="@color/snow">
+
+    <ImageView
+        android:id="@+id/imgview_pesanan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/mccl_nasi_rendang_kotak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraitBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_nmamenupsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inknutantiqua_bold"
+        android:text="Nama Menu"
+        android:textColor="@color/textblack"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imgview_pesanan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/btn_minpsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgview_pesanan"
+        app:layout_constraintStart_toStartOf="@+id/txt_nmamenupsn"
+        app:srcCompat="@drawable/ic_baseline_minus_box" />
+
+    <TextView
+        android:id="@+id/txt_jmlhpsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textColor="@color/textblack"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_minpsn"
+        app:layout_constraintStart_toEndOf="@+id/btn_minpsn"
+        app:layout_constraintTop_toTopOf="@+id/btn_minpsn" />
+
+    <ImageView
+        android:id="@+id/btn_pluspsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_minpsn"
+        app:layout_constraintStart_toEndOf="@+id/txt_jmlhpsn"
+        app:layout_constraintTop_toTopOf="@+id/btn_minpsn"
+        app:srcCompat="@drawable/ic_baseline_plus_box" />
+
+    <TextView
+        android:id="@+id/txt_hrgmenupsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="0"
+        android:textColor="@color/bazaartext"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_pluspsn"
+        app:layout_constraintStart_toStartOf="@+id/txt_jmlhpsn"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nmamenupsn" />
+
+    <TextView
+        android:id="@+id/txt_hrgmenupsnrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Rp"
+        android:textColor="@color/bazaartext"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_hrgmenupsn"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hrgmenupsn"
+        app:layout_constraintStart_toStartOf="@+id/txt_nmamenupsn"
+        app:layout_constraintTop_toTopOf="@+id/txt_hrgmenupsn" />
+
+    <TextView
+        android:id="@+id/txt_jmlhhrgpsn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="0"
+        android:textColor="@color/textblack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pluspsn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_pluspsn" />
+
+    <TextView
+        android:id="@+id/txt_jmlhhrgpsnRP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Rp"
+        android:textColor="@color/textblack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_jmlhhrgpsn"
+        app:layout_constraintEnd_toStartOf="@+id/txt_jmlhhrgpsn"
+        app:layout_constraintTop_toTopOf="@+id/txt_jmlhhrgpsn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

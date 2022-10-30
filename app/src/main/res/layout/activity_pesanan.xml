@@ -26,7 +26,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_konfpem">
 
         <LinearLayout
@@ -40,7 +44,8 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:backgroundTint="@color/snow"
-                app:cardCornerRadius="12dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -112,11 +117,12 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="17dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
                 android:layout_marginRight="15dp"
                 android:backgroundTint="@color/snow"
-                app:cardCornerRadius="12dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -159,7 +165,160 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/snow"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_pesanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Pesanan"
+                        android:textColor="@color/textblack"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_pesanan"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/snow"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_ringkasbayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Detail Pembayaran "
+                        android:textColor="@color/textblack"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txt_subtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_ringkasbayar"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Subtotal"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_subtotalangka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_ringkasbayar"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/txt_subtotal"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Subtotal"
+                        android:textColor="@color/bazaartext"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_subtotal"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Tax"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_taxangka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_subtotalangka"
+                        android:layout_marginLeft="195dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/txt_tax"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Tax"
+                        android:textColor="@color/bazaartext"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totalpsn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_tax"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Total Pesanan"
+                        android:textColor="@color/textblack"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_totalpsnangka"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_taxangka"
+                        android:layout_marginLeft="103dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/txt_totalpsn"
+                        android:fontFamily="@font/inknutantiqua_semibold"
+                        android:paddingLeft="10dp"
+                        android:text="Total"
+                        android:textColor="@color/bazaartext"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_pesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="15dp"
+                android:text="Pesan"
+                android:textAllCaps="false"
+                android:typeface="serif"
+                app:backgroundTint="#96704F"/>
+
         </LinearLayout>
+
     </ScrollView>
 
 

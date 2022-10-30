@@ -102,16 +102,10 @@ public class LoginActivity extends AppCompatActivity {
         firebaseauth.signInWithEmailAndPassword(Email, Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
+                if (task.isSuccessful() && task.getResult()!=null){
                     // Berhasil Login
-                    if (firebaseauth.getCurrentUser().isEmailVerified()) {
-                        // Test halaman
-                        startActivity(new Intent(LoginActivity.this, Home_catemenuActivity.class));
-                        finish();
-                    } else {
-                        Toast.makeText(LoginActivity.this,
-                                "Email belum terdaftar", Toast.LENGTH_LONG).show();
-                    }
+                    startActivity(new Intent(LoginActivity.this, Home_catemenuActivity.class));
+                    finish();
                 } else {
                     // Gagal Login
                     Toast.makeText(LoginActivity.this,
