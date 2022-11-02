@@ -3,6 +3,7 @@ package id.kharisma.studio.catelink;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -15,16 +16,26 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.ArrayList;
+import id.kharisma.studio.catelink.Adapter.daftar_menu_Adapter;
+import id.kharisma.studio.catelink.Model.daftar_menu_item_model;
+
 
 public class Home_catemenuActivity extends AppCompatActivity {
 
-    // Inisialisasi variabel
+    // Inisialisasi variabel bottom nav
     BottomNavigationView nav;
+
+    // Inisialisasi var Recyclerview
     RecyclerView recyclerView;
-    daftar_menu_Adapter daftarMenuAdapter;
-    RecyclerView.LayoutManager layoutManager;
-    ArrayList<daftar_menu_item_model> data;
+    daftar_menu_item_model[] mymenu = new daftar_menu_item_model[]{
+            new daftar_menu_item_model("Nasi Kotak Rendang Daging","Catering Box", "25000", R.drawable.mccl_nasi_rendang_kotak),
+            new daftar_menu_item_model("Menu Diet Ayam","Healthy Catering","40000", R.drawable.mccl_ayam_diet),
+            new daftar_menu_item_model("Nasi Kotak Ayam Bumbu","Catering Box", "20000", R.drawable.mccl_nasi_ayam_bumbu),
+            new daftar_menu_item_model("Paket Kantoran A","Catering Kantoranku", "25000", R.drawable.mccl_menu_kantoran_a),
+            new daftar_menu_item_model("Paket Prasmanan A","Bahagia Catering", "255000",R.drawable.mccl_paket_prasmanan_a),
+            new daftar_menu_item_model("Rantang Paket A","Dapur Ibu Sinar", "25000",R.drawable.mccl_rantang_paket_a)
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,27 +44,12 @@ public class Home_catemenuActivity extends AppCompatActivity {
 
         // Recycler View
         recyclerView = findViewById(R.id.menu_recycler);
+
+        daftar_menu_Adapter adapter = new daftar_menu_Adapter(mymenu);
         recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
 
-        // Recycler View model Grid dan jumlah ke samping
-        layoutManager = new GridLayoutManager(this,2);
-        recyclerView.setLayoutManager(layoutManager);
-
-        data = new ArrayList<>();
-        for (int i = 0; i < daftar_menu_item.namaMenu.length; i++){
-            data.add(new daftar_menu_item_model(
-                    daftar_menu_item.namaMenu[i],
-                    daftar_menu_item.namaVendor[i],
-                    daftar_menu_item.alamatVendor[i],
-                    daftar_menu_item.hargaMenu[i],
-                    daftar_menu_item.rateValue[i],
-                    daftar_menu_item.menuposter[i]
-            ));
-        }
-
-        // membuat adapter
-        daftarMenuAdapter = new daftar_menu_Adapter(data);
-        recyclerView.setAdapter(daftarMenuAdapter);
 
         // Bottom Nav
         nav = findViewById(R.id.bottom_navigation);
@@ -87,7 +83,6 @@ public class Home_catemenuActivity extends AppCompatActivity {
                 return false;
             }
         });
-
 
         // Custom image for action bar
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();

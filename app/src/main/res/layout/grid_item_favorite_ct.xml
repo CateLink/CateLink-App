@@ -36,7 +36,7 @@
                 android:padding="8dp">
 
                 <TextView
-                    android:id="@+id/text_namamenu"
+                    android:id="@+id/text_namamenu1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inknutantiqua_medium"
@@ -44,7 +44,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                 <TextView
-                    android:id="@+id/text_namavendor"
+                    android:id="@+id/text_namavendor1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inknutantiqua_medium"
@@ -52,7 +52,7 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                 <TextView
-                    android:id="@+id/text_alamatvendor"
+                    android:id="@+id/text_alamatvendor1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inknutantiqua_medium"
@@ -65,7 +65,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/text_rpmenu"
+                        android:id="@+id/text_rpmenu1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/inknutantiqua_medium"
@@ -73,7 +73,7 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
                     <TextView
-                        android:id="@+id/text_hargamenu"
+                        android:id="@+id/text_hargamenu1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -89,13 +89,13 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/rating_icon"
+                        android:id="@+id/rating_icon1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_baseline_star_rate_24" />
 
                     <TextView
-                        android:id="@+id/rating_value"
+                        android:id="@+id/rating_value1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -105,7 +105,7 @@
                         android:textSize="20sp" />
 
                     <CheckBox
-                        android:id="@+id/cb_fav"
+                        android:id="@+id/cb_fav1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="250dp"

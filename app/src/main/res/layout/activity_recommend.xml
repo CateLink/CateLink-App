@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/cons_home_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -66,10 +66,10 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+        app:layout_constraintTop_toBottomOf="@+id/cons_home_menu">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/menu_recycler"
+            android:id="@+id/menu_recycler2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
