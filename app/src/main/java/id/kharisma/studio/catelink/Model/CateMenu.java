@@ -1,11 +1,11 @@
 package id.kharisma.studio.catelink.Model;
 
-public class daftar_menu_item_model {
+public class CateMenu {
 
-    private String menuName, vendorName, menuPrice;
-    private int poster;
+    String menuName, vendorName, menuPrice;
+    int poster;
 
-    public daftar_menu_item_model(String menuName, String vendorName, String menuPrice, int poster) {
+    public CateMenu(String menuName, String vendorName, String menuPrice, int poster) {
         this.menuName = menuName;
         this.vendorName = vendorName;
         this.menuPrice = menuPrice;

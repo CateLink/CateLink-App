@@ -1,4 +1,4 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -7,6 +7,8 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import id.kharisma.studio.catelink.R;
 
 public class MainActivity extends AppCompatActivity {
 

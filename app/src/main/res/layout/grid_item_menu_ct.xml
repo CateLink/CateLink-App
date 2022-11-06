@@ -21,35 +21,31 @@
 
         <ImageView
             android:id="@+id/clmenu_poster"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mccl_nasi_rendang_kotak" />
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/text_namamenu"
-            android:layout_width="240dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/inknutantiqua_medium"
-            android:text="Nama Menu"
             android:maxLines="2"
+            android:text="Nama Menu"
             android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/clmenu_poster"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_namavendor"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/inknutantiqua_medium"
             android:text="Nama Vendor"
             android:textColor="@color/black"
@@ -59,13 +55,13 @@
 
         <TextView
             android:id="@+id/text_hargamenu"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/inknutantiqua_medium"
             android:text="Harga Menu"
             android:textColor="@color/black"
             android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/text_namavendor"
             app:layout_constraintTop_toBottomOf="@+id/text_namavendor" />
 
@@ -75,9 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:button="@drawable/selector_favorite_menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_hargamenu" />
+            app:layout_constraintBottom_toBottomOf="@+id/text_hargamenu"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

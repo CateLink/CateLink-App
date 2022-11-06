@@ -1,8 +1,10 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import id.kharisma.studio.catelink.R;
 
 public class User_Profile_Activity extends AppCompatActivity {
 

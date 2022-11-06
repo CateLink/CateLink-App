@@ -1,4 +1,4 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import id.kharisma.studio.catelink.R;
 
 public class Edit_Profile_Activity extends AppCompatActivity {
 

@@ -1,14 +1,16 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class PesananActivity extends AppCompatActivity {
+import id.kharisma.studio.catelink.R;
+
+public class FavoriteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pesanan);
+        setContentView(R.layout.activity_favorite);
     }
 }

@@ -5,79 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bonebackgroundcolor"
-    tools:context=".Home_catemenuActivity">
+    tools:context=".Activity.Home_catemenuActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cons_home_menu"
+    <TextView
+        android:id="@+id/textVw_Menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/inknutantiqua_medium"
+        android:paddingLeft="5dp"
+        android:text="Menu"
+        android:textColor="@color/black"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textViewFav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/inknutantiqua_medium"
-            android:paddingLeft="5dp"
-            android:text="Menu"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/search_shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="search"
+        app:layout_constraintStart_toStartOf="@+id/textVw_Menu"
+        app:layout_constraintTop_toBottomOf="@+id/textVw_Menu" />
 
-        <SearchView
-            android:id="@+id/search_view"
-            android:layout_width="314dp"
-            android:layout_height="43dp"
-            android:background="@drawable/search_shape"
-            android:iconifiedByDefault="false"
-            android:queryHint="search"
-            app:layout_constraintStart_toStartOf="@+id/textViewFav"
-            app:layout_constraintTop_toBottomOf="@+id/textViewFav" />
+    <ImageButton
+        android:id="@+id/btn_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/search_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_view"
+        app:layout_constraintTop_toTopOf="@+id/search_view"
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
-        <ImageButton
-            android:id="@+id/btn_cart"
-            android:layout_width="59dp"
-            android:layout_height="50dp"
-            android:backgroundTint="@android:color/transparent"
-            android:src="@drawable/ic_baseline_shopping_cart_24"
-            app:layout_constraintBottom_toBottomOf="@+id/search_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/search_view"
-            app:layout_constraintTop_toTopOf="@+id/search_view" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cons_grid_home"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cons_home_menu">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/menu_recycler"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/search_view"
+        tools:listitem="@layout/grid_item_menu_ct" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -89,6 +67,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,16 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class KeranjangActivity extends AppCompatActivity {
+import id.kharisma.studio.catelink.R;
+
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_keranjang);
+        setContentView(R.layout.activity_settings);
     }
 }

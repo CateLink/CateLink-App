@@ -1,10 +1,12 @@
-package id.kharisma.studio.catelink;
+package id.kharisma.studio.catelink.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import id.kharisma.studio.catelink.R;
 
 public class SplashscnActivity extends AppCompatActivity {
 

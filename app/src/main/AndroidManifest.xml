@@ -14,49 +14,49 @@
         android:theme="@style/Theme.CateLink"
         tools:targetApi="31">
         <activity
-            android:name=".User_Profile_Activity"
+            android:name=".Activity.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".Edit_Profile_Activity"
+            android:name=".Activity.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".PesananActivity"
+            android:name=".Activity.RecommendActivity"
             android:exported="false" />
         <activity
-            android:name=".Detailmenu_Activity"
+            android:name=".Activity.Home_catemenuActivity"
             android:exported="false" />
         <activity
-            android:name=".KeranjangActivity"
+            android:name=".Activity.User_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".CustomListView"
+            android:name=".Activity.Edit_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Activity.PesananActivity"
             android:exported="false" />
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".Activity.Detailmenu_Activity"
             android:exported="false" />
         <activity
-            android:name=".RecommendActivity"
+            android:name=".Activity.KeranjangActivity"
             android:exported="false" />
         <activity
-            android:name=".Home_catemenuActivity"
-            android:exported="true" />
+            android:name=".Activity.CustomListView"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".Activity.SignupActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".Activity.MainActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".Activity.MainActivity" />
         <activity
-            android:name=".SplashscnActivity"
+            android:name=".Activity.SplashscnActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
