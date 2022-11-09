@@ -20,9 +20,6 @@
             android:name=".Activity.FavoriteActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.RecommendActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activity.Home_catemenuActivity"
             android:exported="false" />
         <activity

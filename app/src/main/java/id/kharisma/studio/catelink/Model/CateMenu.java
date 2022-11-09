@@ -2,10 +2,11 @@ package id.kharisma.studio.catelink.Model;
 
 public class CateMenu {
 
-    String menuName, vendorName, menuPrice;
+    String menuName, vendorName;
+    long menuPrice;
     int poster;
 
-    public CateMenu(String menuName, String vendorName, String menuPrice, int poster) {
+    public CateMenu(String menuName, String vendorName, long menuPrice, int poster) {
         this.menuName = menuName;
         this.vendorName = vendorName;
         this.menuPrice = menuPrice;
@@ -28,11 +29,11 @@ public class CateMenu {
         this.vendorName = vendorName;
     }
 
-    public String getMenuPrice() {
+    public long getMenuPrice() {
         return menuPrice;
     }
 
-    public void setMenuPrice(String menuPrice) {
+    public void setMenuPrice(long menuPrice) {
         this.menuPrice = menuPrice;
     }
 
@@ -44,3 +45,4 @@ public class CateMenu {
         this.poster = poster;
     }
 }
+

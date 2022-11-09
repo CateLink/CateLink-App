@@ -1,6 +1,7 @@
 package id.kharisma.studio.catelink.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import id.kharisma.studio.catelink.Activity.Detailmenu_Activity;
 import id.kharisma.studio.catelink.Model.CateMenu;
 import id.kharisma.studio.catelink.R;
 
@@ -38,9 +40,18 @@ public class daftar_menu_Adapter extends RecyclerView.Adapter<daftar_menu_Adapte
     public void onBindViewHolder(@NonNull menuHolder holder, int position) {
 
         holder.menuPoster.setImageResource(cateMenuList.get(position).getPoster());
-        holder.hargaMenu.setText("Rp" + cateMenuList.get(position).getMenuPrice());
+        holder.hargaMenu.setText("Rp " + cateMenuList.get(position).getMenuPrice());
         holder.namaVendor.setText(cateMenuList.get(position).getVendorName());
         holder.namaMenu.setText(cateMenuList.get(position).getMenuName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, Detailmenu_Activity.class);
+                context.startActivity(i);
+
+            }
+        });
 
     }
 
