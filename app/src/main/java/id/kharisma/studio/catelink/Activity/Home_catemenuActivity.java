@@ -78,11 +78,22 @@ public class Home_catemenuActivity extends AppCompatActivity {
         options = new FirebaseRecyclerOptions.Builder<CateMenu>().setQuery(menDataRef,CateMenu.class).build();
         menuAdapter = new FirebaseRecyclerAdapter<CateMenu, MenuHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MenuHolder holder, int position, @NonNull CateMenu model) {
+            protected void onBindViewHolder(@NonNull MenuHolder holder, final int position, @NonNull CateMenu model) {
                 holder.namaMenu.setText(model.getMenuName());
                 holder.namaVendor.setText(model.getVendorName());
                 holder.hargaMenu.setText("Rp " + model.getMenuPrice());
                 Picasso.get().load(model.getPoster()).into(holder.menuPoster);
+
+                // Recyclerview bisa di klik menuju ke detail menu activity
+                holder.vw.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(Home_catemenuActivity.this, Detailmenu_Activity.class );
+                        intent.putExtra("MenuKey", getRef(position).getKey());
+                        startActivity(intent);
+                    }
+                });
 
             }
 

@@ -14,6 +14,7 @@ public class MenuHolder extends RecyclerView.ViewHolder {
     public TextView hargaMenu;
     public TextView namaVendor;
     public TextView namaMenu;
+    public View vw;
 
     public MenuHolder(@NonNull View itemView) {
         super(itemView);
@@ -21,5 +22,6 @@ public class MenuHolder extends RecyclerView.ViewHolder {
         hargaMenu = itemView.findViewById(R.id.text_hargamenu);
         namaVendor = itemView.findViewById(R.id.text_namavendor);
         namaMenu = itemView.findViewById(R.id.text_namamenu);
+        vw = itemView;
     }
 }

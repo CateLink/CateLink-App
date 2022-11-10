@@ -126,7 +126,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="12dp"
                         android:fontFamily="@font/inknutantiqua_semibold"
                         android:text="Deskripsi : "
                         android:textColor="@color/black"
@@ -153,34 +153,34 @@
                         app:layout_constraintTop_toBottomOf="@+id/txt_deskripsimenu" />
 
                     <ImageView
-                        android:id="@+id/btn_minpsn"
+                        android:id="@+id/btn_mindtl"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_marginStart="8dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/txt_jmlhpsn"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_jmlhdtl"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/txt_jmlhpsn"
+                        app:layout_constraintTop_toTopOf="@+id/txt_jmlhdtl"
                         app:srcCompat="@drawable/ic_baseline_minus_box" />
 
                     <TextView
-                        android:id="@+id/txt_jmlhpsn"
+                        android:id="@+id/txt_jmlhdtl"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="1"
                         android:textColor="@color/textblack"
                         android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/btn_pluspsn"
-                        app:layout_constraintStart_toEndOf="@+id/btn_minpsn"
-                        app:layout_constraintTop_toTopOf="@+id/btn_pluspsn" />
+                        app:layout_constraintBottom_toBottomOf="@+id/btn_plusdtl"
+                        app:layout_constraintStart_toEndOf="@+id/btn_mindtl"
+                        app:layout_constraintTop_toTopOf="@+id/btn_plusdtl" />
 
                     <ImageView
-                        android:id="@+id/btn_pluspsn"
+                        android:id="@+id/btn_plusdtl"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:layout_marginStart="16dp"
                         app:layout_constraintBottom_toBottomOf="@+id/btn_tmbhcart"
-                        app:layout_constraintStart_toEndOf="@+id/txt_jmlhpsn"
+                        app:layout_constraintStart_toEndOf="@+id/txt_jmlhdtl"
                         app:layout_constraintTop_toTopOf="@+id/btn_tmbhcart"
                         app:srcCompat="@drawable/ic_baseline_plus_box" />
 
@@ -189,6 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:layout_marginTop="24dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/inknutantiqua_semibold"
@@ -199,9 +200,10 @@
                         app:backgroundTint="#96704F"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.81"
-                        app:layout_constraintStart_toEndOf="@+id/btn_pluspsn"
-                        app:layout_constraintTop_toBottomOf="@+id/txt_detailmenudesk" />
+                        app:layout_constraintHorizontal_bias="0.887"
+                        app:layout_constraintStart_toEndOf="@+id/btn_plusdtl"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_detailmenudesk"
+                        app:layout_constraintVertical_bias="1.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
