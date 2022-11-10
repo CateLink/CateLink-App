@@ -2,6 +2,7 @@ package id.kharisma.studio.catelink.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,14 +12,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import id.kharisma.studio.catelink.Adapter.daftar_menu_Adapter;
+import id.kharisma.studio.catelink.Holder.MenuHolder;
 import id.kharisma.studio.catelink.Model.CateMenu;
 import id.kharisma.studio.catelink.R;
 
@@ -29,7 +36,14 @@ public class Home_catemenuActivity extends AppCompatActivity {
 
     // Inisialisasi variabel Recyclerview
     RecyclerView menuRecycler;
-    daftar_menu_Adapter menuAdapter;
+
+    // Inisialisasi variabel Searchview
+    SearchView searchView;
+
+    // Inisialisasi Firebase
+    FirebaseRecyclerOptions<CateMenu> options;
+    FirebaseRecyclerAdapter<CateMenu, MenuHolder> menuAdapter;
+    DatabaseReference menDataRef ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,28 +58,53 @@ public class Home_catemenuActivity extends AppCompatActivity {
         actionBar.setCustomView(view);
         // Custom image for action bar
 
-        List<CateMenu> cateMenuList = new ArrayList<>();
-
-        cateMenuList.add(new CateMenu("Nasi Kotak Rendang Daging","Catering Box",25000,R.drawable.mccl_nasi_rendang_kotak));
-        cateMenuList.add(new CateMenu("Menu Diet Ayam","Healthy Catering",35000,R.drawable.mccl_ayam_diet));
-        cateMenuList.add(new CateMenu("Nasi Kotak Ayam Bumbu","Catering Box",20000,R.drawable.mccl_nasi_ayam_bumbu));
-        cateMenuList.add(new CateMenu("Paket Kantoran A","Catering Kantoranku",25000,R.drawable.mccl_menu_kantoran_a));
-        cateMenuList.add(new CateMenu("Paket Prasmanan A","Bahagia Catering",45000,R.drawable.mccl_paket_prasmanan_a));
-        cateMenuList.add(new CateMenu("Rantang Paket A","Dapur Ibu Sinar",25000,R.drawable.mccl_rantang_paket_a));
-
-        setMenuRecycler(cateMenuList);
-
-        bottomNav();
-
-    }
-
-    private void setMenuRecycler(List<CateMenu> cateMenuList){
-
+        // Recyclerview Layoutmanager
         menuRecycler = findViewById(R.id.menu_recycler);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         menuRecycler.setLayoutManager(layoutManager);
-        menuAdapter = new daftar_menu_Adapter(this, cateMenuList);
+        menuRecycler.setHasFixedSize(true);
+
+        //Database Reference
+        menDataRef = FirebaseDatabase.getInstance().getReference().child("CateMenu");
+
+        bottomNav();
+        setSearchView();
+        LoadData();
+
+    }
+
+    private void LoadData() {
+
+        options = new FirebaseRecyclerOptions.Builder<CateMenu>().setQuery(menDataRef,CateMenu.class).build();
+        menuAdapter = new FirebaseRecyclerAdapter<CateMenu, MenuHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull MenuHolder holder, int position, @NonNull CateMenu model) {
+                holder.namaMenu.setText(model.getMenuName());
+                holder.namaVendor.setText(model.getVendorName());
+                holder.hargaMenu.setText("Rp " + model.getMenuPrice());
+                Picasso.get().load(model.getPoster()).into(holder.menuPoster);
+
+            }
+
+            @NonNull
+            @Override
+            public MenuHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item_menu_ct,parent,false);
+
+                return new MenuHolder(v);
+            }
+        };
+
+        menuAdapter.startListening();
         menuRecycler.setAdapter(menuAdapter);
+
+
+    }
+
+    protected void setSearchView(){
+        searchView = findViewById(R.id.search_view_menu);
+        searchView.clearFocus();
 
     }
 

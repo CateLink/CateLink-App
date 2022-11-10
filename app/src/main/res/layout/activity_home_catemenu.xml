@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,8 +31,8 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/search_shape"
-        android:iconifiedByDefault="false"
-        android:queryHint="search"
+        app:queryHint="Search Here"
+        app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="@+id/textVw_Menu"
         app:layout_constraintStart_toStartOf="@+id/textVw_Menu"
         app:layout_constraintTop_toBottomOf="@+id/textVw_Menu" />

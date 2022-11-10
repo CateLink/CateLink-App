@@ -2,16 +2,23 @@ package id.kharisma.studio.catelink.Model;
 
 public class CateMenu {
 
-    String menuName, vendorName;
-    long menuPrice;
-    int poster;
+    // Model Class
+    private String menuName, vendorName, poster;
+    private long menuPrice;
 
-    public CateMenu(String menuName, String vendorName, long menuPrice, int poster) {
+    //Constructor
+
+    public CateMenu(String menuName, String vendorName, String poster, long menuPrice) {
         this.menuName = menuName;
         this.vendorName = vendorName;
-        this.menuPrice = menuPrice;
         this.poster = poster;
+        this.menuPrice = menuPrice;
     }
+
+    public CateMenu() {
+    }
+
+    // Getter and Setter
 
     public String getMenuName() {
         return menuName;
@@ -29,20 +36,20 @@ public class CateMenu {
         this.vendorName = vendorName;
     }
 
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
     public long getMenuPrice() {
         return menuPrice;
     }
 
     public void setMenuPrice(long menuPrice) {
         this.menuPrice = menuPrice;
-    }
-
-    public int getPoster() {
-        return poster;
-    }
-
-    public void setPoster(int poster) {
-        this.poster = poster;
     }
 }
 
